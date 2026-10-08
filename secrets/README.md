@@ -1,6 +1,6 @@
 # Local API secrets
 
-Create `social_api.env` in this directory with the provider credentials:
+Created `social_api.env` in this directory with the provider credentials:
 
 ```dotenv
 TWITTERAPI_IO_KEY=replace-with-your-twitterapi.io-key

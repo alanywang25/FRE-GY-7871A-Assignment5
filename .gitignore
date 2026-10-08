@@ -5,6 +5,7 @@ __pycache__/
 .env
 secrets/*
 !secrets/README.md
+figures/
 data/raw/
 data/derived/
 *.pyc
