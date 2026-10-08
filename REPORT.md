@@ -6,7 +6,7 @@
 
 The executed text sample makes immigration the most frequent *predefined* issue label, while external polling still supports a cost-of-living/health-care centered voter-concern hypothesis. The distinction matters: collected-media salience is not representative polling. A recent AP-NORC report says Democrats have gained an advantage on cost of living and health care; a rural-voter AP/KFF poll likewise puts cost of living and health-care costs ahead of immigration. [AP-NORC](https://apnews.com/article/109768f7544c9e0fcc7e716de0dc2157) [AP/KFF rural voter poll](https://apnews.com/article/b03eea8538b024fd02f5fb52e811738b)
 
-The investment conclusion is deliberately narrower. Election-linked sentiment can be a useful *risk monitor*, but neither a topic/sweep correlation nor a basket return establishes that an election outcome caused the return. Policy timing, earnings, rates, oil, and campaign developments all confound it. The notebook reports correlation, a one-day-lag specification, and market-adjusted returns; it does not convert those estimates into a trading recommendation.
+The investment conclusion is deliberately narrower. Election-linked sentiment can be a useful risk monitor, but neither a topic/sweep correlation nor a basket return establishes that an election outcome caused the return. Policy timing, earnings, rates, oil, and campaign developments all confound it. The notebook reports correlation, a one-day-lag specification, and market-adjusted returns; it does not convert those estimates into a trading recommendation.
 
 ## Design
 
@@ -110,21 +110,10 @@ Cost of living, immigration, and the broad `other` bucket meet the notebook's 20
 
 The results remain heterogeneous within every topic. UNH is positive on the same day while CVS is near zero, and immigration-linked GEO and CXW are both negative on the same day but remain negative at one day. NEE has the largest lagged magnitude (-0.637), but only ten matched observations. These diagnostics are too short and inconsistent to support a portfolio-level conclusion; company news, industry conditions, and ordinary market variation are likely more important than the measured sentiment signal.
 
-## How to interpret the live run
-
-1. **Validate topics first.** Read BERTopic’s representative documents and merge/split labels before calculating sentiment. A high-frequency topic can be campaign coverage rather than voter concern.
-2. **Inspect coverage and overlap.** Fewer than 20 matched dates yields no reported correlation. Plot missingness and source mix.
-3. **Compare levels and changes.** A correlation in daily levels can be spurious due to trends. Re-run using first differences and a one-day lag; expect instability with a short pre-election sample.
-4. **Treat a basket result as a hypothesis test.** Check constituents separately, run an equal-weight portfolio, and report the sensitivity to excluding any one name.
-
 ## Findings to carry forward
 
 The defensible conclusion is two-layered. External polling supports a cost-of-living/health-care centered voter-concern hypothesis; the successful five-source media/social corpus instead gives the greatest predefined-topic salience to immigration. Neither should be conflated with the other. The reported topic-market and equity associations are small or unstable across specifications and non-causal; the project identifies issues worth monitoring, not a dependable forecast or trade.
 
 ## Limitations and ethics
 
-- Text reflects publication/platform behavior and users who post, not a representative voter sample.
-- API results and terms change; respect provider rate limits, terms, and geographic eligibility.
-- Sentiment classifiers can encode dialect, partisan framing, and domain biases. Audit errors by source and topic.
-- Event contracts may be illiquid and contract wording can differ from the intended concept.
-- This is educational research, not investment, election, or political advice.
+The extracted text data reflects publication/platform behavior and users who post, not a representative voter sample. In addition, API results and terms can change respect to provider rate limits, terms, and geographic eligibility. Event contracts may also be illiquid and contract wording can differ from the intended concept.
