@@ -1,0 +1,10 @@
+.DS_Store
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.env
+secrets/*
+!secrets/README.md
+data/raw/
+data/derived/
+*.pyc
