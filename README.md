@@ -38,7 +38,7 @@ jupyter lab
 
 The default public collection path is GDELT, Google News RSS, **Hacker News public search**, Mastodon public tag timelines, and required X posts through twitterapi.io, plus Polymarket's public Gamma/CLOB endpoints. The X collector uses only read-only advanced search, caps retrieval at three pages by default, and preserves source/URL provenance. Review the provider's current terms and billing before raising the cap.
 
-Instead of exporting the X key in every terminal, create [`secrets/twitterapi_io.env`](secrets/README.md) (the actual key file is Git-ignored). The collector loads it automatically and will retry a rate-limited request up to twice with `Retry-After` or exponential backoff. Keep `TWITTERAPI_MAX_PAGES` low; reducing pages, narrowing dates, and waiting for the indicated reset are the right remedies for repeated HTTP 429 responses.
+Instead of exporting the X key in every terminal, create [`secrets/social_api.env`](secrets/README.md) (the actual key file is Git-ignored). The collector loads it automatically and will retry a rate-limited request up to twice with `Retry-After` or exponential backoff. Keep `TWITTERAPI_MAX_PAGES` low; reducing pages, narrowing dates, and waiting for the indicated reset are the right remedies for repeated HTTP 429 responses.
 
 If Polymarket discovery returns no suitable active contract, do not invent one. Inspect the exact current market and set `POLYMARKET_YES_TOKEN` to its literal YES CLOB token in a local secrets file; the notebook will then retrieve that token's history. A direct Democratic-sweep contract is preferred. Otherwise, construct and document a House/Senate probability product separately.
 
